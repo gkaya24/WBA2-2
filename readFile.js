@@ -1,3 +1,8 @@
+// Schreiben Sie ein Programm in Node.js, das die Datei cities.json ausliest und die darin
+// enthaltene Liste von Städten auf der Konsole ausgibt.
+// Verwenden Sie zum Auslesen der Datei die oben genannten asynchronen Funktionen des
+// fs-Moduls.
+
 var fs = require('fs');
 var fileName="cities";
 var fileExt="json";

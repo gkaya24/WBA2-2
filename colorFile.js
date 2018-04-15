@@ -1,3 +1,6 @@
+// Geben Sie die Namen, Länder und Einwohnerzahlen farbig auf der Konsole aus.
+// Hirzu konnen Sie das Chalk Modul verwenden.
+
 var fs=require('fs');
 var color=require('chalk');
 var directory="JSON";

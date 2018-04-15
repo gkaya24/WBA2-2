@@ -1,3 +1,5 @@
+// Sortieren Sie die Städt nach Einwohnerzahlen und schreiben sie diese Liste in eine neue JSON Datei, bevor Sie die sortierte Liste auf der Konsole ausgeben.
+
 var fs=require('fs');
 var color=require('chalk');
 var directory="JSON";
@@ -28,9 +30,9 @@ fs.readFile("JSON/"+destName+"."+fileExt,"utf8",function(err,data)
   var content=JSON.parse(data);
   for(var i=0;i<content.length;i++)
   {
-    console.log("\nName: "+content[i].name+",");
-    console.log("Country: "+content[i].country+",");
-    console.log("Population: "+content[i].population.toLocaleString("de-DE")); //Source: https://stackoverflow.com/questions/5731193/how-do-i-format-numbers-using-javascript
+    console.log(color.underline(color.red("\nName: "))+color.bgRed(color.green(content[i].name))+",");
+    console.log(color.underline(color.green("Country: "))+color.bgGreen(color.red(content[i].country))+",");
+    console.log(color.underline(color.blue("Population: "))+color.bgBlue(color.yellow(content[i].population.toLocaleString("de-DE")))); //Source: https://stackoverflow.com/questions/5731193/how-do-i-format-numbers-using-javascript
     console.log("-----------------------");
   }
 });
