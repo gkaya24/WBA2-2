@@ -1,10 +1,10 @@
 var fs = require('fs');
 var fileName="cities";
 var fileExt="json";
-
 fs.readFile("JSON/"+fileName+"."+fileExt,"utf8",function(err,data)
 {
   if(err) console.error("\nCouldn't parse "+fileName+"."+fileExt+"\n");
+
   var content=JSON.parse(data);
   for(var i=0;i<content.cities.length;i++)
   {
