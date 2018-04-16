@@ -16,7 +16,7 @@ fs.readFile(directory+"/"+fileName+"."+fileExt,"utf8",function(err,data)
     return a.population - b.population;
   });
 
-  fs.writeFile("JSON/"+destName+"."+fileExt, JSON.stringify(destData), (err) =>
+  fs.writeFile("JSON/"+destName+"."+fileExt, JSON.stringify(destData),(err) =>
   {
     if(err) console.error("Couldn't write "+destName+"."+fileExt+"\n");
     console.log("\nThe file "+destName+".json was saved successfully!");
